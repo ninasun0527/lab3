@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PatientActivity">
+
+        <EditText
+            android:id="@+id/editTextPatientId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Patient ID"
+            android:inputType="number"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            app:layout_constraintTop_toBottomOf="@id/editTextPatientId"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            app:layout_constraintTop_toBottomOf="@id/editTextFirstName"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextDepartment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Department"
+            app:layout_constraintTop_toBottomOf="@id/editTextLastName"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Room"
+            app:layout_constraintTop_toBottomOf="@id/editTextDepartment"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/buttonAddPatient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Patient"
+            app:layout_constraintTop_toBottomOf="@id/editTextRoom"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/buttonViewTests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Tests"
+            app:layout_constraintTop_toBottomOf="@id/buttonAddPatient"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/buttonUpdateInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Info"
+            app:layout_constraintTop_toBottomOf="@id/buttonViewTests"
+            android:layout_marginTop="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

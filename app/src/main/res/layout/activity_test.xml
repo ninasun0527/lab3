@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TestActivity">
+
+        <EditText
+            android:id="@+id/editTextTestId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Test ID"
+            android:inputType="number"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextPatientId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Patient ID"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/editTextTestId"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextBPL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Blood Pressure Low"
+            android:inputType="numberDecimal"
+            app:layout_constraintTop_toBottomOf="@id/editTextPatientId"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextBPH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Blood Pressure High"
+            android:inputType="numberDecimal"
+            app:layout_constraintTop_toBottomOf="@id/editTextBPL"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextTemperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Temperature"
+            android:inputType="numberDecimal"
+            app:layout_constraintTop_toBottomOf="@id/editTextBPH"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextOtherTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Other Test"
+            app:layout_constraintTop_toBottomOf="@id/editTextTemperature"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/buttonAddTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Test"
+            app:layout_constraintTop_toBottomOf="@id/editTextOtherTest"
+            android:layout_marginTop="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -10,10 +10,10 @@ import com.lujia.lujiasun_comp304lab3_ex1.entity.Test
 @Dao
 interface TestDao {
     @Insert
-    suspend fun insert(test: Test)
+    suspend fun insert(test: Test): Long
 
     @Update
-    suspend fun update(test: Test)
+    suspend fun update(test: Test): Int
 
     @Query("SELECT * FROM test WHERE patientId = :patientId")
     fun getTestsByPatientId(patientId: Int): LiveData<List<Test>>

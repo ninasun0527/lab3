@@ -11,5 +11,5 @@ data class Test(
     val BPL: Double,
     val BPH: Double,
     val temperature: Double,
-    val otherTest: String // Example of additional field
+    val otherTest: String
 )

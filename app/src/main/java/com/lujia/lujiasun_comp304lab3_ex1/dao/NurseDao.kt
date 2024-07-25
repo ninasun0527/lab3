@@ -9,7 +9,7 @@ import com.lujia.lujiasun_comp304lab3_ex1.entity.Nurse
 @Dao
 interface NurseDao {
     @Insert
-    suspend fun insert(nurse: Nurse)
+    suspend fun insert(nurse: Nurse): Long
 
     @Query("SELECT * FROM nurse WHERE nurseId = :id")
     fun getNurseById(id: Int): LiveData<Nurse>
